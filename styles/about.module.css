@@ -1,0 +1,19 @@
+.about {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.about h1 {
+  font-size: 50px;
+}
+
+.about p {
+  margin: 1.5rem 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.about small {
+  color: #969696;
+  font-size: 14px;
+}

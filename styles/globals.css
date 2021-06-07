@@ -1,3 +1,11 @@
+:root {
+  --color-one: var(#0d0630);
+  --color-two: var(#18314f);
+  --color-three: var(#36f1cd);
+  --color-four: var(#80a1d4);
+  --color-five: var(#13c4a3);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
 * {
