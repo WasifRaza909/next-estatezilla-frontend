@@ -1,0 +1,33 @@
+.navbar {
+  background-color: rgb(245, 86, 86);
+  max-height: 10vh;
+  min-height: 10vh;
+  width: 100%;
+  /* padding: 0 2rem; */
+}
+
+.navbar .logo {
+  color: #0000ff;
+  letter-spacing: 2px;
+  width: 60%;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar .logo:hover {
+  color: #babaeb;
+}
+
+.navbar .navFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 3rem;
+}
+
+.navbar .navLinks {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
