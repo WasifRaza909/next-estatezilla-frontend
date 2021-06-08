@@ -1,0 +1,62 @@
+.card {
+  background-color: #ffffff;
+  max-width: 500px;
+  display: block;
+  margin: auto;
+  padding: 2rem 1.8rem;
+  box-shadow: 2px 2px 20px #a3a3a3;
+}
+
+.card h1 {
+  margin-bottom: 2.3rem;
+}
+
+.card .formControl {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.card .formControl label {
+  font-size: 16px;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+.card .formControl input {
+  padding: 0.8rem 0.4rem;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  outline: none;
+}
+
+.card input[type='submit'] {
+  display: block;
+  width: 100%;
+  background-color: #18314f;
+  padding: 0.8rem;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card p a {
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #18314f;
+}
+
+.card p a:hover {
+}

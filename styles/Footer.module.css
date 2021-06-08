@@ -9,8 +9,11 @@
 }
 
 .footer p {
-  color: #000000;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 0.8rem;
+}
+
+.footer a {
+  color: #0d0630;
 }

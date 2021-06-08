@@ -5,15 +5,17 @@
 
 .about h1 {
   font-size: 50px;
+  color: #608ed3;
 }
 
 .about p {
   margin: 1.5rem 0;
   font-size: 16px;
   font-weight: 500;
+  color: #18314f;
 }
 
 .about small {
-  color: #969696;
+  color: #000000;
   font-size: 14px;
 }
