@@ -1,22 +1,17 @@
 .navbar {
-  background-color: #18314f;
   max-height: 10vh;
   min-height: 10vh;
   width: 100%;
-  /* padding: 0 2rem; */
+
   box-shadow: 1px 0px 8px #36f1cd;
 }
 
 .navbar .logo {
-  color: #ffffff;
+  color: #000;
   letter-spacing: 2px;
   width: 60%;
   font-size: 24px;
   font-weight: 700;
-}
-
-.navbar .logo:hover {
-  color: #eceaea;
 }
 
 .navbar .navFlex {
@@ -33,5 +28,6 @@
   justify-content: space-between;
 }
 .navbar .navLinksItems {
-  color: #ffffff;
+  color: #3773bd;
+  font-weight: 400;
 }

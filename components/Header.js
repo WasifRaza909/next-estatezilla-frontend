@@ -11,11 +11,11 @@ export default function Header() {
           <a className={styles.logo}>EstateZilla</a>
         </Link>
         <ul className={styles.navLinks}>
-          <Link href='/properties'>
-            <a className={styles.navLinksItems}>Properties</a>
+          <Link href='/estates'>
+            <a className={styles.navLinksItems}>Estates</a>
           </Link>
-          <Link href='/properties/add'>
-            <a className={styles.navLinksItems}>Add Property</a>
+          <Link href='/estates/add'>
+            <a className={styles.navLinksItems}>Add Estate</a>
           </Link>
           <Link href='/account/dashboard'>
             <a className={styles.navLinksItems}>Dashboard</a>
