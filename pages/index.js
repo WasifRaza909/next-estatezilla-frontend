@@ -9,11 +9,6 @@ export default function HomePage({ estates }) {
   return (
     <>
       <Layout>
-        <div className={styles.background}>
-          <h1>Welcome to EstateZilla</h1>
-          <p>Find Properties of your choice!</p>
-        </div>
-
         <div className={styles.listings}>
           <h1>Recent Listings</h1>
           {estates.length === 0 && <h2>No Estates to show</h2>}

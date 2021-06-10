@@ -1,0 +1,86 @@
+.card {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 10px rgb(223, 219, 219);
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.date {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.image {
+  width: 25%;
+}
+.center {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.center > div {
+  width: 40%;
+}
+
+.center hr {
+  /* transform: rotate(90deg); */
+  width: 1px;
+  background-color: black;
+  height: 70%;
+  margin-right: 2rem;
+}
+
+.button {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+}
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: space-around;
+  width: 70%;
+  margin: 0.3rem 0;
+}
+
+.badge {
+  width: 120px;
+  height: 25px;
+  background-color: #0274ff;
+  color: #ffffff;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0.4rem 0;
+}
+
+.badge:nth-child(3) {
+  background-color: red;
+}
+
+.price {
+  background-color: #bad3f8;
+  margin-top: 0.6rem;
+  width: 120px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  font-size: 14px;
+}

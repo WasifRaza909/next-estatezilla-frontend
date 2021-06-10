@@ -1,35 +1,11 @@
-.background {
-  /* background-color: #3773bd; */
-  background: radial-gradient(#3773bd, #0d0630);
-  height: 45vh;
-  text-align: center;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.background h1 {
-  font-size: 50px;
-}
-
-.background p {
-  font-weight: 500;
-  padding-top: 0.5rem;
-}
-
-.listings {
-  max-width: 65%;
-  margin: 0 auto;
-  padding-top: 3rem;
-}
-
 .listings h1 {
   padding-bottom: 2rem;
 }
 
 .listings h2 {
   text-align: center;
+}
+
+.listings a {
+  color: #18314f;
 }

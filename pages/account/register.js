@@ -9,7 +9,7 @@ export default function Register() {
       <div className={styles.card}>
         <h1>
           <FaUser />
-          Log In
+          Register
         </h1>
         <form className='form'>
           <div className={styles.formControl}>

@@ -1,1 +1,25 @@
+.children {
+  width: 65%;
+  margin: 80px auto;
+}
 
+.background {
+  background: radial-gradient(#3773bd, #0d0630);
+  height: 50vh;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background h1 {
+  font-size: 50px;
+}
+
+.background p {
+  font-weight: 500;
+  padding-top: 0.5rem;
+}

@@ -1,0 +1,62 @@
+.estate h1 {
+  margin: 1rem 0 1.5rem 0;
+}
+
+.estate .date {
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.estate .bottom {
+  margin: 1rem 0;
+}
+
+.estate .bottomFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.estate .bottomFlex p {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  font-weight: 700;
+  margin: 0 1rem 0 0;
+  background-color: #faf6f6;
+}
+
+.estate .bottomFlex div {
+  display: flex;
+  margin-top: 0.4rem;
+}
+
+.estate .price {
+  background-color: #ffffff;
+  box-shadow: 1px 1px 6px rgb(219, 218, 218);
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.estate .address {
+  margin: 2rem 0;
+  font-weight: 500;
+}
+
+.estate .address span {
+  font-weight: 600;
+}
+
+.estate .map {
+  margin-bottom: 2rem;
+}
+
+.estate .back {
+  color: #18314f;
+}

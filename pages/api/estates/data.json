@@ -1,28 +1,28 @@
-{
+ {
     "estates": [
       {
         "id": "1",
-        "estateType": "Multi Family",
-        "slug": "multi-family",
+        "estateType": "Multi Family House",
+        "slug": "multi-family-house",
         "estateAddress": "Ex-1 Block 5 Gulshan-e-Iqbal, Karachi, Sindh, Pakistan",
         "bedrooms" : "3",
         "bathrooms": "4",
-        "size":  "2160 sqft",
-        "price": "Rs 150,000,00",
-        "date": "7-15-2021",
-        "image": "./images/multi-family-1.jpg"
+        "size":  "2160",
+        "price": "150,000,00",
+        "date": "2-15-2021",
+        "image": "/images/multi-family-1.jpg"
       },
       {
         "id": "2",
-        "estateType": "Single Family",
-        "slug": "single-family",
+        "estateType": "Single Family House",
+        "slug": "single-family-house",
         "estateAddress": "Ex-2 Block 8 Gulshan-e-Iqbal, Karachi, Sindh, Pakistan",
         "bedrooms" : "2",
         "bathrooms": "2",
-        "size":  "720 sqft",
-        "price": "Rs 75,000,00",
-        "date": "7-15-2021",
-        "image": "./images/single-family.jpg"
+        "size":  "720",
+        "price": "75,000,00",
+        "date": "3-15-2021",
+        "image": "/images/single-family.jpg"
       },
       {
         "id": "3",
@@ -31,10 +31,10 @@
         "estateAddress": "Ex-3 Block 8 Gulshan-e-Iqbal, Karachi, Sindh, Pakistan",
         "bedrooms" : "0",
         "bathrooms": "0",
-        "size":  "1440 sqft",
-        "price": "Rs 45,000,00",
-        "date": "7-15-2021",
-        "image": "./images/land.jpg"
+        "size":  "1440",
+        "price": "45,000,00",
+        "date": "1-15-2021",
+        "image": "/images/land.jpg"
       },
       {
         "id": "4",
@@ -43,22 +43,22 @@
         "estateAddress": "Ex-4 Block 12 Gulshan-e-Iqbal, Karachi, Sindh, Pakistan",
         "bedrooms" : "0",
         "bathrooms": "0",
-        "size":  "4500 sqft",
-        "price": "Rs 250,000,00",
-        "date": "7-15-2021",
-        "image": "./images/farm.jpg"
+        "size":  "4500",
+        "price": "250,000,00",
+        "date": "12-15-2020",
+        "image": "/images/farm.jpg"
       },
       {
         "id": "5",
-        "estateType": "Multi Family",
-        "slug": "multi-family",
+        "estateType": "Multi Family House",
+        "slug": "multi-family-house",
         "estateAddress": "Ex-5 Block 5 Gulshan-e-Iqbal, Karachi, Sindh, Pakistan",
         "bedrooms" : "5",
         "bathrooms": "7",
-        "size":  "4500 sqft",
-        "price": "Rs 200,00,000",
-        "date": "7-15-2021",
-        "image": "./images/multi-family-2.jpg"
+        "size":  "4500",
+        "price": "200,00,000",
+        "date": "5-21-2021",
+        "image": "/images/multi-family-2.jpg"
       }
     ]
 }
