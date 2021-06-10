@@ -11,7 +11,7 @@ export default function HomePage({ estates }) {
       <Layout>
         <div className={styles.listings}>
           <h1>Recent Listings</h1>
-          {estates.length === 0 && <h2>No Estates to show</h2>}
+          {estates.length === 0 && <h2>No Estates to Show</h2>}
 
           {estates.map((estate) => (
             <EstateItem key={estate.id} estate={estate} />
@@ -19,7 +19,7 @@ export default function HomePage({ estates }) {
 
           {estates.length > 0 && (
             <Link href='/estates/'>
-              <a>View All Listings</a>
+              <a className={styles.button}>View All Listings</a>
             </Link>
           )}
         </div>
@@ -34,6 +34,6 @@ export async function getServerSideProps() {
   const estates = await res.json();
 
   return {
-    props: { estates },
+    props: { estates: estates.slice(0, 3) },
   };
 }

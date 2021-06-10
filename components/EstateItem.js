@@ -12,7 +12,7 @@ export default function EstateItem({ estate }) {
         <div>
           <p className={styles.date}>{estate.date}</p>
           <h3>{estate.estateType}</h3>
-          <h5 className={styles.price}>{estate.price}</h5>
+          <h5 className={styles.price}>Rs {estate.price}</h5>
         </div>
         <hr />
         <div className={styles.badges}>

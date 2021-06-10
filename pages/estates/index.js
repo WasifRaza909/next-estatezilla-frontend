@@ -1,9 +1,35 @@
 import Layout from '@/components/Layout';
+import styles from '@/styles/EstatesPage.module.css';
+import EstateItem from 'components/EstateItem';
+import Link from 'next/link';
 
-export default function EstatesPage() {
+export default function EstatesPage({ estates }) {
   return (
     <Layout>
-      <h1>Estates</h1>
+      <div className={styles.listings}>
+        <h1>All Listings</h1>
+        {estates.length === 0 && <h2>No Estates to Show</h2>}
+
+        {estates.map((estate) => (
+          <EstateItem key={estate.id} estate={estate} />
+        ))}
+
+        {estates.length > 0 && (
+          <Link href='/estates/'>
+            <a style={{ color: '#18314f' }}>View All Listings</a>
+          </Link>
+        )}
+      </div>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/estates/`);
+
+  const estates = await res.json();
+
+  return {
+    props: { estates },
+  };
 }
