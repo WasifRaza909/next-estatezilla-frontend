@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout.js';
-import styles from '@/styles/about.module.css';
+import styles from '@/styles/AboutPage.module.css';
 
-export default function About() {
+export default function AboutPage() {
   return (
     <Layout>
       <div className={styles.about}>

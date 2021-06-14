@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: row;
   padding: 0 20px;
+
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3rem;
@@ -24,7 +25,6 @@
   width: 50%;
   display: flex;
   align-items: center;
-  margin-left: 2rem;
 }
 
 .center > div {
@@ -84,4 +84,9 @@
   align-items: center;
   letter-spacing: 1px;
   font-size: 14px;
+}
+
+.condition {
+  margin: 0 auto;
+  width: 10%;
 }

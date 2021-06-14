@@ -13,12 +13,6 @@ export default function EstatesPage({ estates }) {
         {estates.map((estate) => (
           <EstateItem key={estate.id} estate={estate} />
         ))}
-
-        {estates.length > 0 && (
-          <Link href='/estates/'>
-            <a style={{ color: '#18314f' }}>View All Listings</a>
-          </Link>
-        )}
       </div>
     </Layout>
   );

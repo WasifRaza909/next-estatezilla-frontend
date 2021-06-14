@@ -35,7 +35,10 @@
 
 .navbar .navLinksItems:last-child {
   color: #ffffff;
+  color: #000000;
   background-color: #171d25;
+  background-color: #ffffff;
+  border: 2px solid #000;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-size: 14px;

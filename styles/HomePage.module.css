@@ -1,3 +1,7 @@
+.listings {
+  width: 100%;
+}
+
 .listings h1 {
   padding-bottom: 2rem;
 }
@@ -12,9 +16,24 @@
 
 .listings .button {
   color: #ffffff;
+  color: #000000;
   background-color: #171d25;
-  padding: 0.6rem 1rem;
+  background-color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
+  /* width: 180px; */
+  text-align: center;
+  padding: 0.6rem 0 0.6rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  transition: all 1s ease;
+}
+
+.listings .button:hover {
+  background-color: #eceaea;
 }

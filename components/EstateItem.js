@@ -18,9 +18,10 @@ export default function EstateItem({ estate }) {
         <div className={styles.badges}>
           <div className={styles.badge}>Bed : {estate.bedrooms}</div>
           <div className={styles.badge}>Bath : {estate.bathrooms}</div>
-          <div className={styles.badge}>{estate.size}</div>
+          <div className={styles.badge}>{estate.size} sqft</div>
         </div>
       </div>
+      
       <Link href={`/estates/${estate.slug}`}>
         <a className={styles.button}>Details</a>
       </Link>
