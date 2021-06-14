@@ -29,7 +29,7 @@ export default function HomePage({ estates }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/estates/`);
+  const res = await fetch(`${process.env.STRAPI_URL}/estates`);
 
   const estates = await res.json();
 
