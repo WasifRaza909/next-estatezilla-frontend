@@ -2,6 +2,7 @@ import Layout from '@/components/Layout';
 import styles from '@/styles/EstatesPage.module.css';
 import EstateItem from 'components/EstateItem';
 import Link from 'next/link';
+import { API_URL } from '@/config/index';
 
 export default function EstatesPage({ estates }) {
   return (
@@ -19,7 +20,7 @@ export default function EstatesPage({ estates }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/estates/`);
+  const res = await fetch(`${API_URL}/estates/`);
 
   const estates = await res.json();
 

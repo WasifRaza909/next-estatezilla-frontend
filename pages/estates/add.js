@@ -1,10 +1,26 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Layout from 'components/Layout';
 import Link from 'next/link';
 import styles from '@/styles/AddEstatesPage.module.css';
+import { API_URL } from '@/config/index';
 
 export default function AddEstatesPage() {
-  const [values, setValues] = useState({});
+  const router = useRouter();
+
+  const [values, setValues] = useState({
+    estateAddress: '',
+    estateType: '',
+    bedrooms: '',
+    bathrooms: '',
+    size: '',
+    price: '',
+    phoneNumber: '',
+    date: `${new Date().toString().slice(4, 15)}`,
+    condition: '',
+  });
 
   const onChangeHandler = (e) => {
     e.preventDefault();
@@ -12,19 +28,50 @@ export default function AddEstatesPage() {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
+  const submitHandler = async (e) => {
+    e.preventDefault();
+
+    const hasEmptyFields = Object.values(values).some(
+      (element) => element === ''
+    );
+
+    if (hasEmptyFields) {
+      toast.error('Please Fill In All Fields');
+      return;
+    }
+    console.log(values);
+    const res = await fetch(`${API_URL}/estates`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    });
+
+    if (!res.ok) {
+      console.log(res);
+      toast.error(`Something went wrong`);
+    } else {
+      const estate = await res.json();
+
+      router.push(`/estates/${estate.id}`);
+    }
+  };
+
   return (
     <Layout>
       <div className={styles.addEstate}>
         <Link href='/events'>Go Back</Link>
         <h1>Add Estate</h1>
-        <form>
+        <ToastContainer />
+        <form onSubmit={submitHandler}>
           <div className={styles.inputGroups}>
             <div className={styles.inputGroup}>
-              <label htmlFor='address'>Property Address</label>
+              <label htmlFor='address'>Estate Address</label>
               <input
                 type='text'
-                name='address'
-                id='address'
+                name='estateAddress'
+                id='estateAddress'
                 onChange={onChangeHandler}
               />
             </div>
@@ -34,6 +81,7 @@ export default function AddEstatesPage() {
                 name='estateType'
                 id='estateType'
                 onChange={onChangeHandler}>
+                <option>Select Estate Type</option>
                 <option value='Single Family House'>Single Family House</option>
                 <option value='Multi Family House'>Multi Family House</option>
                 <option value='Land'>Land</option>
@@ -61,11 +109,11 @@ export default function AddEstatesPage() {
               />
             </div>
             <div className={styles.inputGroup}>
-              <label htmlFor='homeSize'>Home Size</label>
+              <label htmlFor='size'>Home Size</label>
               <input
                 type='number'
-                name='homeSize'
-                id='homeSize'
+                name='size'
+                id='size'
                 onChange={onChangeHandler}
                 min='0'
               />
@@ -79,6 +127,19 @@ export default function AddEstatesPage() {
                 onChange={onChangeHandler}
                 min='0'
               />
+            </div>
+
+            <div className={styles.inputGroup}>
+              <label htmlFor='phoneNumber'>Phone Number</label>
+              <input
+                type='tel'
+                placeholder=''
+                name='phoneNumber'
+                id='phoneNumber'
+                onChange={onChangeHandler}
+                pattern='[0-9]{3}-[0-9]{4}-[0-9]{3}'
+              />
+              <small>Format: 123-4567-890</small>
             </div>
             <div className={styles.inputGroup}>
               <label htmlFor='condition'>Condition</label>

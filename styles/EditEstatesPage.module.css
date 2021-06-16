@@ -35,6 +35,10 @@
 }
 
 .inputGroup:nth-child(7) {
+  grid-area: phoneInputGroup;
+}
+
+.inputGroup:nth-child(8) {
   grid-area: conditionInputGroup;
 }
 
@@ -89,7 +93,7 @@
     'propertyInputGroup propertyInputGroup propertyInputGroup propertyInputGroup propertyInputGroup propertyInputGroup'
     'typeInputGroup typeInputGroup typeInputGroup bedroomsInputGroup bedroomsInputGroup bedroomsInputGroup'
     'bathroomsInputGroup bathroomsInputGroup bathroomsInputGroup sizeInputGroup sizeInputGroup sizeInputGroup'
-    'priceInputGroup priceInputGroup priceInputGroup priceInputGroup priceInputGroup priceInputGroup'
+    'priceInputGroup priceInputGroup priceInputGroup phoneInputGroup phoneInputGroup phoneInputGroup'
     'conditionInputGroup conditionInputGroup conditionInputGroup conditionInputGroup conditionInputGroup conditionInputGroup';
 
   grid-gap: 20px;

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import EstateItem from '@/components/EstateItem';
+import { API_URL } from '@/config/index';
 
 import styles from '@/styles/HomePage.module.css';
 
@@ -29,7 +30,7 @@ export default function HomePage({ estates }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.STRAPI_URL}/estates`);
+  const res = await fetch(`${API_URL}/estates`);
 
   const estates = await res.json();
 

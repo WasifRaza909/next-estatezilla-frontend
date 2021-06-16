@@ -3,8 +3,6 @@ import styles from '@/styles/EstateItem.module.css';
 import Link from 'next/link';
 
 export default function EstateItem({ estate }) {
-  console.log(`${estate.image.formats.thumbnail.url}`);
-
   return (
     <div className={styles.card}>
       <div className={styles.image}>
@@ -12,7 +10,7 @@ export default function EstateItem({ estate }) {
           src={
             estate.image
               ? estate.image.formats.thumbnail.url
-              : '/images/multi-family-1.jpg'
+              : '/images/default.png'
           }
           width={170}
           height={120}
@@ -32,7 +30,7 @@ export default function EstateItem({ estate }) {
         </div>
       </div>
 
-      <Link href={`/estates/${estate.slug}`}>
+      <Link href={`/estates/${estate.id}`}>
         <a className={styles.button}>Details</a>
       </Link>
     </div>
