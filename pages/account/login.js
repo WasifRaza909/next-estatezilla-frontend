@@ -1,9 +1,34 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Layout from '@/components/Layout';
 import styles from '@/styles/Login.module.css';
+import AuthContext from 'context/AuthContext';
 import Link from 'next/link';
+import { useState } from 'react';
 import { FaUser } from 'react-icons/fa';
+import { useContext } from 'react';
 
 export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const { login, error } = useContext(AuthContext);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (email === '' || password === '') {
+      toast.error('Please Fill In All Fields');
+      return;
+    } else {
+      login({ email, password });
+    }
+  };
+
+  {
+    error && toast.error(error);
+  }
+
   return (
     <Layout>
       <div className={styles.card}>
@@ -11,10 +36,18 @@ export default function Login() {
           <FaUser />
           Log In
         </h1>
-        <form className='form'>
+        <ToastContainer />
+        <form onSubmit={submitHandler} className='form'>
           <div className={styles.formControl}>
             <label htmlFor='email'>Email Address</label>
-            <input type='email' name='email' id='email' placeholder='' />
+            <input
+              type='email'
+              name='email'
+              id='email'
+              placeholder=''
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className={styles.formControl}>
             <label htmlFor='password'>Password</label>
@@ -23,6 +56,8 @@ export default function Login() {
               name='password'
               id='password'
               placeholder=''
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <input type='submit' value='Login' />

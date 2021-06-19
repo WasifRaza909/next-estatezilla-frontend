@@ -6,8 +6,10 @@ import Layout from 'components/Layout';
 import Link from 'next/link';
 import styles from '@/styles/AddEstatesPage.module.css';
 import { API_URL } from '@/config/index';
+import cookie from 'cookie';
+import { parseCookie } from 'helpers';
 
-export default function AddEstatesPage() {
+export default function AddEstatesPage({ token }) {
   const router = useRouter();
 
   const [values, setValues] = useState({
@@ -39,11 +41,12 @@ export default function AddEstatesPage() {
       toast.error('Please Fill In All Fields');
       return;
     }
-    console.log(values);
+
     const res = await fetch(`${API_URL}/estates`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(values),
     });
@@ -109,7 +112,7 @@ export default function AddEstatesPage() {
               />
             </div>
             <div className={styles.inputGroup}>
-              <label htmlFor='size'>Home Size</label>
+              <label htmlFor='size'>Estate Size</label>
               <input
                 type='number'
                 name='size'
@@ -161,4 +164,14 @@ export default function AddEstatesPage() {
       </div>
     </Layout>
   );
+}
+
+export async function getServerSideProps({ req }) {
+  const { token } = parseCookie(req);
+
+  return {
+    props: {
+      token,
+    },
+  };
 }

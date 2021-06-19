@@ -89,6 +89,7 @@
 
 .inputGroups {
   display: grid;
+
   grid-template-areas:
     'propertyInputGroup propertyInputGroup propertyInputGroup propertyInputGroup propertyInputGroup propertyInputGroup'
     'typeInputGroup typeInputGroup typeInputGroup bedroomsInputGroup bedroomsInputGroup bedroomsInputGroup'

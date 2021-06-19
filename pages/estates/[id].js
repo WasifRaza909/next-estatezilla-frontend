@@ -6,7 +6,6 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { API_URL } from '@/config/index';
 
 export default function Estate({ est }) {
-  console.log(est);
   return (
     <Layout>
       <div className={styles.estate}>

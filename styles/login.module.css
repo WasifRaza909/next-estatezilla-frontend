@@ -54,9 +54,6 @@
 .card p a {
   letter-spacing: 1px;
   font-size: 15px;
-  font-weight: 600;
-  color: #18314f;
-}
-
-.card p a:hover {
+  font-weight: 500;
+  color: #0569ff;
 }

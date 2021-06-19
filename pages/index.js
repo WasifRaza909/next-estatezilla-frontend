@@ -30,11 +30,11 @@ export default function HomePage({ estates }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`${API_URL}/estates`);
+  const res = await fetch(`${API_URL}/estates?_limit=3&_sort=date:DESC`);
 
   const estates = await res.json();
 
   return {
-    props: { estates: estates.slice(0, 3) },
+    props: { estates: estates },
   };
 }

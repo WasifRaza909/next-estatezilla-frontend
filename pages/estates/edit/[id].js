@@ -6,8 +6,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '@/styles/EditEstatesPage.module.css';
 import { API_URL } from '@/config/index';
+import { parseCookie } from '@/helpers/index';
 
-export default function EditEstatesPage({ est }) {
+export default function EditEstatesPage({ est, token }) {
   const router = useRouter();
 
   const [values, setValues] = useState({
@@ -43,6 +44,7 @@ export default function EditEstatesPage({ est }) {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(values),
     });
@@ -111,7 +113,7 @@ export default function EditEstatesPage({ est }) {
               />
             </div>
             <div className={styles.inputGroup}>
-              <label htmlFor='size'>Home Size</label>
+              <label htmlFor='size'>Estate Size</label>
               <input
                 type='number'
                 name='size'
@@ -169,7 +171,8 @@ export default function EditEstatesPage({ est }) {
   );
 }
 
-export async function getServerSideProps({ params: { id } }) {
+export async function getServerSideProps({ params: { id }, req }) {
+  const { token } = parseCookie(req);
   const res = await fetch(`${API_URL}/estates/${id}`);
 
   const est = await res.json();
@@ -177,6 +180,7 @@ export async function getServerSideProps({ params: { id } }) {
   return {
     props: {
       est,
+      token,
     },
   };
 }
