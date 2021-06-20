@@ -18,6 +18,12 @@
   padding-bottom: 1rem;
 }
 
+.estate .bottomFlexTwo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .estate .bottomFlex p {
   display: flex;
   align-items: center;
