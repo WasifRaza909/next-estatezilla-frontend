@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pagination .prevButton {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 1s ease;
+  margin-right: 1rem;
+  padding: 0.6rem 1.2rem;
+}
+
+.pagination .nextButton {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.6rem 1.2rem;
+  transition: all 1s ease;
+}

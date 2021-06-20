@@ -3,7 +3,7 @@
 }
 
 .listings h1 {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .listings h2 {
@@ -15,10 +15,7 @@
 }
 
 .listings .button {
-  color: #ffffff;
   color: #000000;
-  background-color: #171d25;
-  background-color: #000000;
   background-color: #ffffff;
   border: 1px solid #000;
   border-radius: 8px;
@@ -32,6 +29,7 @@
   align-items: center;
   margin: 0 auto;
   transition: all 1s ease;
+  margin-top: 3rem;
 }
 
 .listings .button:hover {
