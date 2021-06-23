@@ -1,5 +1,5 @@
 .children {
-  width: 65%;
+  max-width: 70%;
   margin: 80px auto;
 }
 
@@ -21,5 +21,24 @@
 
 .background p {
   font-weight: 500;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
+}
+
+@media (max-width: 1150px) {
+  .children {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .background h1 {
+    font-size: 53px;
+  }
+
+  .background p {
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-top: 1rem;
+  }
 }

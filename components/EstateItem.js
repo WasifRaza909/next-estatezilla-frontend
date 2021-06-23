@@ -13,7 +13,8 @@ export default function EstateItem({ estate }) {
               : '/images/default.png'
           }
           width={170}
-          height={120}
+          height={100}
+          layout='responsive'
         />
       </div>
       <div className={styles.center}>

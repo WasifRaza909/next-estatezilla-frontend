@@ -15,6 +15,7 @@
   transition: all 1s ease;
   margin-right: 1rem;
   padding: 0.6rem 1.2rem;
+  letter-spacing: 1px;
 }
 
 .pagination .nextButton {
@@ -27,4 +28,17 @@
   text-align: center;
   padding: 0.6rem 1.2rem;
   transition: all 1s ease;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 1920px) {
+  .pagination .prevButton {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .pagination .nextButton {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
 }

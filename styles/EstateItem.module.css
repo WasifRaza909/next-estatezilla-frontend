@@ -20,11 +20,13 @@
 .image {
   width: 25%;
 }
+
 .center {
   height: 100%;
   width: 50%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .center > div {
@@ -44,6 +46,7 @@
   color: #ffffff;
   padding: 1rem 1.5rem;
   border-radius: 4px;
+  font-weight: 500;
 }
 
 .badges {
@@ -89,4 +92,44 @@
 .condition {
   margin: 0 auto;
   width: 10%;
+}
+
+@media (min-width: 1920px) {
+  .badge {
+    font-size: 18px;
+    width: 130px;
+    height: 40px;
+  }
+  .card {
+    height: 200px;
+  }
+
+  .image {
+    width: 25%;
+  }
+
+  .center {
+    width: 40%;
+  }
+
+  .center > div {
+    width: 30%;
+  }
+
+  .center > div h3 {
+    font-size: 25px;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .price {
+    width: 160px;
+    height: 40px;
+    letter-spacing: 1px;
+    font-size: 18px;
+  }
+  .button {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
 }

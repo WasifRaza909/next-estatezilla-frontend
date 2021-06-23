@@ -16,6 +16,7 @@ export default function Estate({ est }) {
         <div className={styles.image}>
           {est.image && (
             <Image
+              layout='responsive'
               src={
                 est.image
                   ? est.image.formats.thumbnail.url
@@ -23,6 +24,7 @@ export default function Estate({ est }) {
               }
               width={900}
               height={462.5}
+              className={styles.estateImage}
             />
           )}
         </div>

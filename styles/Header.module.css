@@ -2,14 +2,13 @@
   max-height: 10vh;
   min-height: 10vh;
   width: 100%;
-
   box-shadow: 1px 0px 8px #36f1cd;
 }
 
 .navbar .logo {
   color: #000;
   letter-spacing: 2px;
-  width: 0%;
+  width: 20%;
   font-size: 24px;
   font-weight: 700;
 }
@@ -23,7 +22,7 @@
 }
 
 .navbar .navLinks {
-  width: 40%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -35,15 +34,32 @@
 }
 
 .navbar .navLinksItems:last-child {
-  color: #ffffff;
   color: #000000;
-  background-color: #171d25;
   background-color: #ffffff;
   border: 2px solid #000;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   margin-left: 1.7rem;
+}
+
+@media (max-width: 1024px) {
+  .navbar .navLinksItems {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .navbar .navLinksItems {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .navbar .navLinksItems:last-child {
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 0.8rem 1.4rem;
+  }
 }
