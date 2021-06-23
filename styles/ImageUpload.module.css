@@ -1,0 +1,26 @@
+.imageUpload {
+  margin-top: 5rem;
+}
+
+.imageUpload h1 {
+  text-align: center;
+}
+
+.imageUpload form div {
+  background-color: rgb(224, 250, 248);
+  border: 1px solid #7979ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.imageUpload form input[type='file'] {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.imageUpload form input[type='submit'] {
+  display: block;
+  width: 40%;
+  padding: 0.5rem 0;
+}

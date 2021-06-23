@@ -116,3 +116,25 @@
 .addEstate input[type='submit']:hover {
   background-color: #d1cece;
 }
+
+.estateImage {
+  margin-bottom: 1rem;
+}
+
+.setImage {
+  margin: 1rem 0;
+}
+
+.setImageButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 14%;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid blue;
+  cursor: pointer;
+  font-weight: 500;
+}

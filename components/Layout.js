@@ -16,7 +16,7 @@ export default function Layout({ children, title }) {
       {router.pathname === '/' && (
         <div className={styles.background}>
           <h1>Welcome to EstateZilla</h1>
-          <p>Find Properties of your choice!</p>
+          <p>Find Estates of your choice!</p>
         </div>
       )}
       <div className={styles.children}>{children}</div>

@@ -1,12 +1,16 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
-import Layout from 'components/Layout';
+import Layout from '@/components/Layout';
+import Modal from '@/components/Modal';
+import ImageUpload from '@/components/ImageUpload';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styles from '@/styles/EditEstatesPage.module.css';
 import { API_URL } from '@/config/index';
 import { parseCookie } from '@/helpers/index';
+import { FaImage } from 'react-icons/fa';
 
 export default function EditEstatesPage({ est, token }) {
   const router = useRouter();
@@ -21,6 +25,11 @@ export default function EditEstatesPage({ est, token }) {
     phoneNumber: est.phoneNumber,
     condition: est.condition,
   });
+  const [imagePreview, setImagePreview] = useState(
+    est.image ? est.image.formats.thumbnail.url : null
+  );
+
+  const [showModal, setShowModal] = useState(false);
 
   const onChangeHandler = (e) => {
     e.preventDefault();
@@ -56,6 +65,14 @@ export default function EditEstatesPage({ est, token }) {
 
       router.push(`/estates/${estate.id}`);
     }
+  };
+
+  const imageUploaded = async () => {
+    const res = await fetch(`${API_URL}/estates/${est.id}`);
+    const data = await res.json();
+
+    setImagePreview(data.image.formats.thumbnail.url);
+    setShowModal(false);
   };
 
   return (
@@ -166,6 +183,31 @@ export default function EditEstatesPage({ est, token }) {
           </div>
           <input type='submit' value='Update Estate' />
         </form>
+        <h2 className={styles.estateImage}>Estate Image</h2>
+        {imagePreview ? (
+          <Image src={imagePreview} width={170} height={100} />
+        ) : (
+          <div>
+            <p>No image uploaded</p>
+          </div>
+        )}
+        <div className={styles.setImage}>
+          <button
+            onClick={() => setShowModal(true)}
+            className={styles.setImageButton}>
+            <FaImage style={{}} /> Set Image
+          </button>
+        </div>
+
+        {showModal ? (
+          <Modal onClose={() => setShowModal(false)}>
+            <ImageUpload
+              token={token}
+              estId={est.id}
+              imageUploaded={imageUploaded}
+            />
+          </Modal>
+        ) : null}
       </div>
     </Layout>
   );

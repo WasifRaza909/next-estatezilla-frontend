@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import styles from '@/styles/Header.module.css';
 import Link from 'next/link';
-import { useState } from 'react';
 import AuthContext from 'context/AuthContext';
+import Search from '@/components/Search';
 
 export default function Header() {
   const { user, logout } = useContext(AuthContext);
@@ -17,6 +17,9 @@ export default function Header() {
         <Link href='/'>
           <a className={styles.logo}>EstateZilla</a>
         </Link>
+
+        <Search />
+
         <ul className={styles.navLinks}>
           <Link href='/estates'>
             <a className={styles.navLinksItems}>Estates</a>

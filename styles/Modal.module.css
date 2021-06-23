@@ -1,0 +1,25 @@
+.modal {
+  background-color: #ffffff;
+  width: 500px;
+  height: 600px;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.modalIcon {
+  font-size: 30px;
+  float: right;
+  cursor: pointer;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+}
