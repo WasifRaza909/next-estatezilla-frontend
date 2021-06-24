@@ -1,9 +1,8 @@
 .estate h1 {
-  margin: 1rem 0 1.5rem 0;
+  margin: 0.3rem 0 1.8rem 0;
 }
 
 .estate .date {
-  letter-spacing: 1px;
   font-weight: 500;
 }
 
@@ -56,7 +55,7 @@
 }
 
 .estate .address span {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .estate .map {
@@ -65,4 +64,9 @@
 
 .estate .back {
   color: #18314f;
+  font-weight: 500;
+}
+
+.estate .phoneNumber {
+  font-weight: 600;
 }

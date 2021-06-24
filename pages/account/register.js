@@ -1,19 +1,28 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Layout from '@/components/Layout';
 import styles from '@/styles/Login.module.css';
 import Link from 'next/link';
 import { FaUser } from 'react-icons/fa';
 import AuthContext from '../../context/AuthContext';
+import { useRouter } from 'next/router';
 
 export default function Register() {
+  const router = useRouter();
+
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const { register, error } = useContext(AuthContext);
+  const { register, error, user } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (user) {
+      router.push('/account/dashboard');
+    }
+  }, [user]);
 
   const submitHandler = (e) => {
     e.preventDefault();

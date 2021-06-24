@@ -4,15 +4,24 @@ import Layout from '@/components/Layout';
 import styles from '@/styles/Login.module.css';
 import AuthContext from 'context/AuthContext';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaUser } from 'react-icons/fa';
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Login() {
+  const router = useRouter();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { login, error } = useContext(AuthContext);
+  const { login, error, user } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (user) {
+      router.push('/account/dashboard');
+    }
+  }, [user]);
 
   const submitHandler = (e) => {
     e.preventDefault();

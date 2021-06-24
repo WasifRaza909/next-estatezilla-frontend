@@ -30,15 +30,3 @@
   transition: all 1s ease;
   letter-spacing: 1px;
 }
-
-@media (min-width: 1920px) {
-  .pagination .prevButton {
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-
-  .pagination .nextButton {
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-}

@@ -1,15 +1,16 @@
 .card {
   background-color: #ffffff;
-  max-width: 70%;
+  /* max-width: 70%; */
+  max-width: 600px;
   display: block;
   margin: auto;
-  padding: 2.4rem 1.8rem;
+  padding: 2.6rem 1.8rem;
   box-shadow: 2px 2px 20px #dbdbdb;
 }
 
 .card h1 {
-  margin-bottom: 2.3rem;
   font-size: 30px;
+  margin-bottom: 1.5rem;
 }
 
 .card .formControl {
@@ -21,7 +22,7 @@
 .card .formControl label {
   font-size: 16px;
   padding-bottom: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .card .formControl input {
@@ -30,6 +31,7 @@
   border-radius: 4px;
   border: 1px solid #000000;
   outline: none;
+  font-weight: 600;
 }
 
 .card input[type='submit'] {
@@ -49,7 +51,7 @@
 
 .card p {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .card p a {
@@ -57,40 +59,4 @@
   font-size: 15px;
   font-weight: 500;
   color: #0569ff;
-}
-
-@media (min-width: 1920px) {
-  .card h1 {
-    margin-bottom: 2.3rem;
-    font-size: 40px;
-  }
-
-  .card .formControl label {
-    font-size: 18px;
-    font-weight: 600;
-    padding-bottom: 1rem;
-  }
-
-  .card .formControl input {
-    padding: 1rem 0.4rem;
-  }
-
-  .card p {
-    font-size: 18px;
-    font-weight: 500;
-  }
-
-  .card input[type='submit'] {
-    margin-bottom: 1.2rem;
-    padding: 1rem;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-  }
-
-  .card p a {
-    letter-spacing: 1px;
-    font-size: 18px;
-    font-weight: 600;
-  }
 }

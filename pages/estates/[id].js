@@ -42,7 +42,7 @@ export default function Estate({ est }) {
             <p className={styles.address}>
               <span>Address</span> : {est.estateAddress}
             </p>
-            <p>
+            <p className={styles.phoneNumber}>
               <FaPhoneAlt /> {est.phoneNumber}
             </p>
           </div>

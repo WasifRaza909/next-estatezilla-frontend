@@ -12,9 +12,9 @@ export default function EstateItem({ estate }) {
               ? estate.image.formats.thumbnail.url
               : '/images/default.png'
           }
-          width={170}
-          height={100}
-          layout='responsive'
+          width={200}
+          height={120}
+          // layout='responsive'
         />
       </div>
       <div className={styles.center}>

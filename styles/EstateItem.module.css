@@ -94,42 +94,12 @@
   width: 10%;
 }
 
-@media (min-width: 1920px) {
-  .badge {
-    font-size: 18px;
-    width: 130px;
-    height: 40px;
-  }
-  .card {
-    height: 200px;
-  }
-
-  .image {
-    width: 25%;
-  }
-
-  .center {
-    width: 40%;
-  }
-
-  .center > div {
-    width: 30%;
-  }
-
+@media (min-width: 920px) and (max-width: 1199px) {
   .center > div h3 {
-    font-size: 25px;
-    margin: 0 0 0.8rem 0;
+    font-size: 18px;
   }
 
-  .price {
-    width: 160px;
-    height: 40px;
-    letter-spacing: 1px;
-    font-size: 18px;
-  }
-  .button {
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 1px;
+  .date {
+    font-size: 14px;
   }
 }

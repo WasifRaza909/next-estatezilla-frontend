@@ -1,6 +1,5 @@
 .navbar {
-  max-height: 10vh;
-  min-height: 10vh;
+  height: 70px;
   width: 100%;
   box-shadow: 1px 0px 8px #36f1cd;
 }
@@ -17,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 100%;
   padding: 0 3rem;
 }
 
@@ -29,7 +28,7 @@
 }
 .navbar .navLinksItems {
   color: #3773bd;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0.6rem;
 }
 
@@ -45,21 +44,8 @@
   margin-left: 1.7rem;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 920px) and (max-width: 1199px) {
   .navbar .navLinksItems {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .navbar .navLinksItems {
-    font-size: 18px;
-    letter-spacing: 1px;
-  }
-
-  .navbar .navLinksItems:last-child {
-    font-size: 18px;
-    letter-spacing: 1px;
-    padding: 0.8rem 1.4rem;
+    padding: 0.4rem;
   }
 }
