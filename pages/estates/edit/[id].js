@@ -11,9 +11,11 @@ import styles from '@/styles/EditEstatesPage.module.css';
 import { API_URL } from '@/config/index';
 import { parseCookie } from '@/helpers/index';
 import { FaImage } from 'react-icons/fa';
+import Spinner from '@/components/Spinner';
 
 export default function EditEstatesPage({ est, token }) {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   const [values, setValues] = useState({
     estateAddress: est.estateAddress,
@@ -48,7 +50,7 @@ export default function EditEstatesPage({ est, token }) {
       toast.error('Please Fill In All Fields');
       return;
     }
-
+    setLoading(true);
     const res = await fetch(`${API_URL}/estates/${est.id}`, {
       method: 'PUT',
       headers: {
@@ -60,10 +62,11 @@ export default function EditEstatesPage({ est, token }) {
 
     if (!res.ok) {
       toast.error(`Something went wrong`);
+      setLoading(false);
     } else {
       const estate = await res.json();
-
       router.push(`/estates/${estate.id}`);
+      setLoading(false);
     }
   };
 
@@ -79,6 +82,7 @@ export default function EditEstatesPage({ est, token }) {
     <Layout>
       <div className={styles.addEstate}>
         <Link href='/estates'>Go Back</Link>
+        {loading && <Spinner />}
         <h1>Edit Estate</h1>
         <ToastContainer />
         <form onSubmit={submitHandler}>

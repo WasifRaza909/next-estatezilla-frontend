@@ -8,9 +8,11 @@ import styles from '@/styles/AddEstatesPage.module.css';
 import { API_URL } from '@/config/index';
 import cookie from 'cookie';
 import { parseCookie } from 'helpers';
+import Spinner from '@/components/Spinner';
 
 export default function AddEstatesPage({ token }) {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   const [values, setValues] = useState({
     estateAddress: '',
@@ -42,6 +44,7 @@ export default function AddEstatesPage({ token }) {
       return;
     }
 
+    setLoading(true);
     const res = await fetch(`${API_URL}/estates`, {
       method: 'POST',
       headers: {
@@ -54,10 +57,11 @@ export default function AddEstatesPage({ token }) {
     if (!res.ok) {
       console.log(res);
       toast.error(`Something went wrong`);
+      setLoading(false);
     } else {
       const estate = await res.json();
-
       router.push(`/estates/${estate.id}`);
+      setLoading(false);
     }
   };
 
@@ -65,6 +69,7 @@ export default function AddEstatesPage({ token }) {
     <Layout>
       <div className={styles.addEstate}>
         <Link href='/estates'>Go Back</Link>
+        {loading && <Spinner />}
         <h1>Add Estate</h1>
         <ToastContainer />
         <form onSubmit={submitHandler}>

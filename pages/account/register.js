@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { FaUser } from 'react-icons/fa';
 import AuthContext from '../../context/AuthContext';
 import { useRouter } from 'next/router';
+import Spinner from '@/components/Spinner';
 
 export default function Register() {
   const router = useRouter();
@@ -16,7 +17,7 @@ export default function Register() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const { register, error, user } = useContext(AuthContext);
+  const { register, error, user, loading } = useContext(AuthContext);
 
   useEffect(() => {
     if (user) {
@@ -49,6 +50,7 @@ export default function Register() {
   return (
     <Layout>
       <div className={styles.card}>
+        {loading && <Spinner />}
         <h1>
           <FaUser />
           Register
