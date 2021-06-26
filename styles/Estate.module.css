@@ -70,3 +70,38 @@
 .estate .phoneNumber {
   font-weight: 600;
 }
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .estate .address {
+    margin: 0.8rem 0;
+  }
+
+  .estate .bottomFlexTwo {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .estate .bottomFlex {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .estate .bottomFlex div {
+    margin-bottom: 0.8rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .estate .bottomFlexTwo {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .estate .address {
+    margin: 1.5rem 0;
+  }
+}

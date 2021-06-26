@@ -1,3 +1,9 @@
 .search h1 {
   margin: 1rem 0 1.5rem 0;
 }
+
+@media (max-width: 600px) {
+  .search h1 {
+    font-size: 24px;
+  }
+}

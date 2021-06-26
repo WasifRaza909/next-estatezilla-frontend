@@ -24,7 +24,6 @@ export default function Estate({ est }) {
               }
               width={900}
               height={462.5}
-              className={styles.estateImage}
             />
           )}
         </div>

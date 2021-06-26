@@ -23,3 +23,15 @@
   left: 0;
   top: 0;
 }
+
+@media (max-width: 992px) {
+  .modal {
+    height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 350px;
+  }
+}

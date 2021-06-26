@@ -1,6 +1,5 @@
 .navbar {
   height: 70px;
-  width: 100%;
   box-shadow: 1px 0px 8px #36f1cd;
 }
 
@@ -8,11 +7,19 @@
   color: #000;
   letter-spacing: 2px;
   width: 20%;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
 }
 
 .navbar .navFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 3rem;
+}
+
+.navbar .navFlexOn {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,8 +51,114 @@
   margin-left: 1.7rem;
 }
 
-@media (min-width: 920px) and (max-width: 1199px) {
+.burgerMenu {
+  margin: 0 1rem;
+  height: 100%;
+  display: none;
+  cursor: pointer;
+}
+
+.lines {
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 0.6rem 0.4rem;
+}
+
+.lines :nth-child(2) {
+  margin: 0.4rem 0;
+}
+
+.lines div {
+  background-color: black;
+  height: 4px;
+  width: 30px;
+  border-radius: 2px;
+}
+
+.childrenOff {
+  height: 100%;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    height: 100%;
+    padding: 1rem 2rem;
+  }
+  .navbar .burgerMenuLogo {
+    color: #000;
+    letter-spacing: 2px;
+    width: 20%;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .navbar .navLinks {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar .navFlex {
+    display: none;
+  }
+
+  .navbar .logo {
+    display: none;
+  }
+
+  .navbar .navFlexOn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    transition: 2s all ease;
+  }
+
+  .burgerMenu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .lines {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar .navFlex {
+    padding: 0 2rem;
+  }
   .navbar .navLinksItems {
     padding: 0.4rem;
+  }
+
+  .navbar .navLinks {
+    width: 44%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.6rem 0rem;
+  }
+
+  .lines :nth-child(2) {
+    margin: 0.3rem 0;
+  }
+
+  .navbar .navLinks {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .navbar .navLinksItems:last-child {
+    margin-left: 0rem;
+    margin-top: 1rem;
   }
 }

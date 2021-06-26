@@ -33,3 +33,13 @@
   color: #ffffff;
   font-size: 14px;
 }
+
+@media (max-width: 600px) {
+  .about h1 {
+    font-size: 40px;
+  }
+
+  .about p {
+    font-size: 12px;
+  }
+}

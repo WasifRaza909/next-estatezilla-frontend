@@ -78,7 +78,7 @@ export default function EditEstatesPage({ est, token }) {
   return (
     <Layout>
       <div className={styles.addEstate}>
-        <Link href='/events'>Go Back</Link>
+        <Link href='/estates'>Go Back</Link>
         <h1>Edit Estate</h1>
         <ToastContainer />
         <form onSubmit={submitHandler}>

@@ -24,8 +24,21 @@
   padding-top: 0.8rem;
 }
 
-@media (min-width: 920px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .children {
     max-width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .children {
+    max-width: 95%;
+    margin: 60px auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .background h1 {
+    font-size: 44px;
   }
 }

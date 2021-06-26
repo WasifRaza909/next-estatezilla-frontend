@@ -34,7 +34,6 @@
 }
 
 .center hr {
-  /* transform: rotate(90deg); */
   width: 1px;
   background-color: black;
   height: 70%;
@@ -94,9 +93,123 @@
   width: 10%;
 }
 
-@media (min-width: 920px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .center > div h3 {
     font-size: 18px;
+  }
+
+  .date {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .button {
+    padding: 1rem 1rem;
+  }
+
+  .date {
+    font-size: 12px;
+    margin-bottom: 0.1rem;
+  }
+
+  .price {
+    width: 120px;
+  }
+
+  .center > div {
+    width: 50%;
+  }
+  .center > div h3 {
+    font-size: 16px;
+  }
+  .center hr {
+    margin-right: 0rem;
+  }
+
+  .badge {
+    width: 90px;
+  }
+
+  .badges {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    height: 100%;
+    padding: 1.5rem 0;
+  }
+
+  .image {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .badges {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .center {
+    width: 90%;
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+  .center h3 {
+    font-size: 24px;
+  }
+
+  .center .leftCenter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center .badges {
+    width: 100%;
+    margin: 0.4rem 0 0.8rem 0;
+  }
+
+  .center .badge {
+    width: 90px;
+  }
+
+  .center .badges .bedrooms {
+    order: 1;
+  }
+
+  .center .badges .bathrooms {
+    order: 3;
+  }
+
+  .center .badges .size {
+    order: 2;
+  }
+
+  .button {
+    padding: 0.8rem 1.6rem;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 90%;
+    text-align: center;
+    background-color: #0467e0;
+  }
+
+  .center hr {
+    display: none;
+  }
+
+  .price {
+    height: 40px;
+    width: 140px;
+    font-size: 16px;
   }
 
   .date {

@@ -61,3 +61,32 @@
     letter-spacing: 1px;
   }
 }
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .dashboard .card h3 {
+    font-size: 16px;
+  }
+
+  .dashboard .card .links {
+    width: 35%;
+  }
+
+  .dashboard .card .links a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard .card {
+    flex-direction: column;
+  }
+
+  .dashboard .card h3 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .dashboard .card .links {
+    width: 100%;
+  }
+}
