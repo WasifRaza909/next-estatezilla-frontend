@@ -2,7 +2,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useContext, useEffect, useState } from 'react';
 import Layout from '@/components/Layout';
-import styles from '@/styles/Login.module.css';
+import styles from '@/styles/LoginPage.module.css';
 import Link from 'next/link';
 import { FaUser } from 'react-icons/fa';
 import AuthContext from '../../context/AuthContext';

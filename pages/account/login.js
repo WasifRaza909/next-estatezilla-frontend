@@ -2,7 +2,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Layout from '@/components/Layout';
 import Spinner from '@/components/Spinner';
-import styles from '@/styles/Login.module.css';
+import styles from '@/styles/LoginPage.module.css';
 import AuthContext from 'context/AuthContext';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
