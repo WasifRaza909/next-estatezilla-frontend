@@ -93,6 +93,13 @@
     margin-bottom: 0.8rem;
     width: 100%;
     justify-content: center;
+    flex-direction: column;
+    background-color: #faf6f6;
+    align-items: center;
+  }
+
+  .estate .bottomFlex div p {
+    margin: 0.5rem 0;
   }
 
   .estate .bottomFlexTwo {
