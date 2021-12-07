@@ -8,7 +8,6 @@ export const AuthProvider = ({ children }) => {
 
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getLoggedInUser();
@@ -16,7 +15,6 @@ export const AuthProvider = ({ children }) => {
 
   // Register a User
   const register = async (user) => {
-    setLoading(true);
     const res = await fetch(`${NEXT_URL}/api/register`, {
       method: 'POST',
       headers: {
@@ -30,17 +28,14 @@ export const AuthProvider = ({ children }) => {
     if (res.ok) {
       setUser(data.user);
       router.push(`/account/dashboard`);
-      setLoading(false);
     } else {
       setError(data.message);
       setError(null);
-      setLoading(false);
     }
   };
 
   // Login User
   const login = async ({ email: identifier, password }) => {
-    setLoading(true);
     const res = await fetch(`${NEXT_URL}/api/login`, {
       method: 'POST',
       headers: {
@@ -58,7 +53,6 @@ export const AuthProvider = ({ children }) => {
       setError(data.message);
       setError(null);
     }
-    setLoading(false);
   };
 
   // Get Logged In User
@@ -89,9 +83,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider
-      value={{ register, login, logout, user, error, loading }}
-    >
+    <AuthContext.Provider value={{ register, login, logout, user, error }}>
       {children}
     </AuthContext.Provider>
   );

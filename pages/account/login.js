@@ -1,7 +1,7 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Layout from '@/components/Layout';
-import Spinner from '@/components/Spinner';
+
 import styles from '@/styles/LoginPage.module.css';
 import AuthContext from 'context/AuthContext';
 import Link from 'next/link';
@@ -16,7 +16,7 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { login, error, user, loading } = useContext(AuthContext);
+  const { login, error, user } = useContext(AuthContext);
 
   useEffect(() => {
     if (user) {
@@ -42,7 +42,6 @@ export default function Login() {
   return (
     <Layout>
       <div className={styles.card}>
-        {loading && <Spinner />}
         <h1>
           <FaUser />
           Log In
