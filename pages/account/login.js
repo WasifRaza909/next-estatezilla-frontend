@@ -48,34 +48,34 @@ export default function Login() {
           Log In
         </h1>
         <ToastContainer />
-        <form onSubmit={submitHandler} className='form'>
+        <form onSubmit={submitHandler} className="form">
           <div className={styles.formControl}>
-            <label htmlFor='email'>Email Address</label>
+            <label htmlFor="email">Email Address</label>
             <input
-              type='email'
-              name='email'
-              id='email'
-              placeholder=''
+              type="email"
+              name="email"
+              id="email"
+              placeholder=""
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className={styles.formControl}>
-            <label htmlFor='password'>Password</label>
+            <label htmlFor="password">Password</label>
             <input
-              type='password'
-              name='password'
-              id='password'
-              placeholder=''
+              type="password"
+              name="password"
+              id="password"
+              placeholder=""
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <input type='submit' value='Login' />
+          <input type="submit" value="Login" />
         </form>
         <p>
           Don't have an account?
-          <Link href='/account/register'>
+          <Link href="/account/register">
             <a> Register</a>
           </Link>
         </p>
